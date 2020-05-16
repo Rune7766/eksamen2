@@ -8,6 +8,16 @@ img {
     height: auto;
 }
 
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+}
+
+h2 h3 h4[] p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
 /*MENU*/
 .topnav {
     background-color: #E9E6E1;
@@ -89,6 +99,33 @@ img {
 /*Kære søster*/
 
 .Kaeresoester {
+    margin: 10px;
+    padding-top: 150px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.information {
+    width: 500px;
+
+}
+
+.bog {
+    width: 400px;
+}
+
+.knap {
+    background-color: #F2C53C;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+
 }
