@@ -18,6 +18,10 @@ h2 h3 h4[] p {
     font-size: 20px;
 }
 
+
+
+
+
 /*MENU*/
 .topnav {
     background-color: #E9E6E1;
@@ -79,6 +83,9 @@ h2 h3 h4[] p {
     }
 }
 
+
+
+/*----------------------FORSIDE------------------------*/
 /*Hero*/
 .Heroimage h1 {
     position: relative;
@@ -87,18 +94,19 @@ h2 h3 h4[] p {
 
 }
 
-.tekst {
+.herotekst {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-10%, -100%);
     font-size: 3rem;
+    color: beige;
 
 }
 
 /*Kære søster*/
 
-.Kaeresoester {
+.wrapper {
     margin: 10px;
     padding-top: 150px;
     display: flex;
@@ -106,7 +114,7 @@ h2 h3 h4[] p {
     justify-content: center;
 }
 
-.Kaeresoester p {
+.wrapper p {
     font-size: 25px;
 }
 
@@ -116,15 +124,20 @@ h2 h3 h4[] p {
 
 }
 
-.bog {
+.digital {
     width: 400px;
 }
+
+.digitalVideo {
+    width: 700px;
+}
+
 
 .findminbog {
     padding-top: 60px
 }
 
-.knap {
+button {
     background-color: #F2C53C;
     border: none;
     color: black;
@@ -137,4 +150,10 @@ h2 h3 h4[] p {
     cursor: pointer;
     border-radius: 5%;
 
+}
+
+/*--------------OM---------------*/
+.textconten {
+    width: 700px;
+    margin-right: 160px;
 }

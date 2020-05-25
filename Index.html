@@ -21,46 +21,55 @@
     </div>
 </header>
 
+
+
+
 <body>
     <section class="Heroimage">
-        <img src="Heroimge.jpg" alt="billede af naiha">
-        <div class="tekst">
-            <h1>denne tekst skal byttes ud med pods!</h1>
+        <img class="splash" src="" alt="Naiha K">
+        <div class="herotekst">
+            <h1 class="tekst"></h1>
         </div>
 
     </section>
 
 
-    <section class="Kaeresoester">
-        <div class="information">
-            <h1>kære søster</h1>
-            <p>skal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med podsskal byttes ud med pods</p>
+    <section class="wrapper">
+        <div class="col1">
+            <div class="tekst1">
+                <p class="information"></p>
+            </div>
             <div class="findminbog">
-                <button class="knap">Find min bog her.</button>
+                <a href="https://www.saxo.com/dk/kaere-soester_naiha-khiljee_haeftet_9788711918753?dfw_tracker=13098-75990987&gclid=CjwKCAjw2a32BRBXEiwAUcugiP07IU3YB7eBbtusuofF3dq-oE3cupZOdU22vN0aJOY6VZG05ib3sBoCe38QAvD_BwE" target="_parent"><button>Find min bog her. !</button></a>
             </div>
         </div>
-        <div class="bog">
-            <img src="kaereSoesterBog.jpg" alt="Kære søster bog">
-        </div>
+        <div class="digital">
+            <img class="bog" src="" alt="billede af bogen"></div>
     </section>
-    <script src="script.js">
-    </script>
-    <footer>
-        <section class="kontaktinfo">
-            <p>NaihaKjilee@gmail.com<br>
-                telefon 26705686</p>
-        </section>
-        <section class="folgmig">
-            <p>følg mig på de Sociale Medier<br>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-instagram"></i>
-            </p>
-        </section>
-    </footer>
 
 
+    <script>
+        /*ændre forside/12 hvis du skal bruge en ny side*/
 
-    <script src="script.js">
+        let side;
+        const url = "http://orangeduck.dk/Naiha/wp-json/wp/v2/forside/12";
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            side = await response.json();
+            /* vis();*/
+            console.log(side)
+            document.querySelector(".information").innerHTML = side.content.rendered;
+            document.querySelector(".tekst").innerHTML = side.herotekst;
+            document.querySelector(".bog").src = side.imgbook.guid;
+            document.querySelector(".splash").src = side.splash.guid;
+        }
     </script>
 
 </body></html>
