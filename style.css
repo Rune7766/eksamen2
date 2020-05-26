@@ -13,14 +13,19 @@ h1 {
     font-size: 4rem;
 }
 
-h2 h3 h4 {
+h2 h4 {
     font-family: 'Raleway', sans-serif;
     font-size: 2em;
 }
 
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+}
+
 p {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 
@@ -123,6 +128,7 @@ p {
     width: 700px;
     margin-right: 160px;
 
+
 }
 
 .digital {
@@ -164,4 +170,45 @@ button {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
+}
+
+/*--------------Kalender---------------*/
+
+.tekst1 {
+    justify-content: center
+}
+
+.flex-container {
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container div {
+    background-color: #f1f1f1;
+    width: 350px;
+    margin: 10px;
+    font-size: 30px;
+    border-radius: 1%;
+}
+
+.kalender1 h2 {
+    text-align: center;
+}
+
+.kalender1 {
+    font-size: 15px;
+    text-align: left;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.kalender1 h3 {
+    font-size: 17px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.kalender1 {
+    padding: 10px;
 }

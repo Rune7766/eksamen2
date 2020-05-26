@@ -26,29 +26,80 @@
         <div class="col1">
             <div class="tekst1">
                 <h1 class="overskrift_h1"></h1>
-                <p class="information"></p>
+                <p class="kalender_tekst"></p>
             </div>
         </div>
     </section>
+    <h1>Event navn</h1>
+    <section class="flex-container">
+
+        <template>
+            <div class="kalender">
+                <img class="kalenderimg" src="" alt="billede af stedet">
+                <h3 class="korttekst">kommer en meget kort tekst på 3 linjer!ommer en meget kort tekst på 3 linjer!ommer en meget kort tekst på 3 linjer!</h3>
+                <p style="text-align: left"><strong> Hvor:</strong> <span class="sted" style="float: right"></span></p>
+                <p style="text-align: left"><strong> dato og tid:</strong> <span class="tid" style="float: right"></span></p>
+                <p style="text-align: left"><strong> adresse:</strong> <span class="adresse" style="float: right"></span></p>
+                <p style="text-align: left"><strong> pris</strong> <span class="pris" style="float: right"></span></p>
+            </div>
+        </template>
+
+    </section>
 
     <script>
-        /*ændre forside/12 hvis du skal bruge en ny side*/
-
-        let side;
-        const url = "http://orangeduck.dk/Naiha/eventkalender/43/";
-        document.addEventListener("DOMContentLoaded", start);
-
+        let midten;
+        const link = "http://orangeduck.dk/Naiha/wp-json/wp/v2/eventkalender";
+        const template = document.querySelector("template").content;
+        const eventliste = document.querySelector(".flex-container");
 
         function start() {
-            hentJson();
+            hentJson2();
         }
 
-        async function hentJson() {
-            const response = await fetch(url);
-            side = await response.json();
-            /* vis();*/
-            console.log(side)
-            document.querySelector(".information").innerHTML = side.content.rendered;
+        async function hentJson2() {
+            let response = await fetch(link);
+            midten = await response.json();
+
+            visEvent();
         }
+
+        function visEvent() {
+            console.log(midten);
+            midten.forEach(data => {
+                /* console.log("test");*/
+
+
+                const klon = template.cloneNode(true);
+                klon.querySelector(".kalenderimg").src = data.kalenderimg.guid;
+                klon.querySelector(".korttekst").innerHTML = data.korttekst;
+                klon.querySelector(".sted").innerHTML = data.sted;
+                klon.querySelector(".tid").innerHTML = data.tid;
+                klon.querySelector(".pris").innerHTML = data.pris;
+                eventliste.appendChild(klon);
+            });
+        }
+
+        start();
+        /* let side;
+         const url = "http://orangeduck.dk/Naiha/wp-json/wp/v2/eventkalender/43";
+         document.addEventListener("DOMContentLoaded", start);
+
+
+
+         async function hentJson() {
+             const response = await fetch(url);
+             side = await response.json();
+              vis();
+             console.log(side)
+             document.querySelector(".kalender_tekst").innerHTML = side.content.rendered;
+             document.querySelector(".overskrift_h1").innerHTML = side.overskrift_h1;
+
+
+                 document.querySelector(".kalenderimg").src = side.kalenderimg.guid;
+                 document.querySelector(".korttekst").innerHTML = side.korttekst;
+                 document.querySelector(".sted").innerHTML = side.sted;
+                 document.querySelector(".tid").innerHTML = side.tid;
+                 document.querySelector(".pris").innerHTML = side.pris
+         }*/
     </script>
 </body></html>
