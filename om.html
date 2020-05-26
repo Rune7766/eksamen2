@@ -13,7 +13,7 @@
     <div class="topnav" id="myTopnav">
         <a href="om.html">Naiha Khiljee</a>
         <a href="Kalender.html">Event</a>
-        <a href="kareSoster">Kære søster</a>
+        <a href="Index.html">Kære søster</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -27,10 +27,10 @@
         <div class="col1">
             <div class="tekst1">
                 <h1 class="overskrift_h1"></h1>
-                <p class="information"></p>
+                <p class="information1"></p>
             </div>
         </div>
-        <div class="digitaVideol"><iframe width="760" height="515" src="https://www.youtube.com/embed/6umjku7zg-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="digitaVideo"><iframe width="860" height="515" src="https://www.youtube.com/embed/6umjku7zg-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
     </section>
 
@@ -50,7 +50,7 @@
             side = await response.json();
             /* vis();*/
             console.log(side)
-            document.querySelector(".information").innerHTML = side.content.rendered;
+            document.querySelector(".information1").innerHTML = side.content.rendered;
             document.querySelector(".overskrift_h1").innerHTML = side.overskrift_h1;
 
 
