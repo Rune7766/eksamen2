@@ -23,6 +23,75 @@
 
 <body>
 
-    <script src="script.js">
+    <section class="wrapper">
+        <div class="col1">
+            <h1 class="overksrift_h1"></h1>
+            <p class="information"></p>
+        </div>
+        <img class="billede" src="" alt="billede af stedet">
+
+    </section>
+    <div class="skitse">
+        <img class="naiha" src="" alt="billede af bogen"></div>
+    <footer class="fixed_footer">
+        <div class="footer">
+            <div class="contain">
+                <div class="col"></div>
+                <div class="col">
+                    <h1>Kontakt</h1>
+                    <ul>
+                        <li>alt kontatkt skal ske igennem mit forlag. </li>
+                        <li>telefon: +45 36 15 66 00</li>
+                        <li>rec@lindhardtogringhof.dk</li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>pressen skriver</h1>
+                    <ul>
+                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg"> Naiha vil skrive en bog</a> </li>
+                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/blev-headhuntet-efter-artikel-paa-drdk-vi-var-alle-sammen-blown-away"> Blev headhuntet</a> </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>menu</h1>
+                    <ul>
+                        <li><a href="om.html">Naiha Khiljee</a></li>
+                        <li><a href="Kalender.html">Event</a></li>
+                        <li><a href="#kareSoster">Kære søster</a></li>
+                        <li> <a href="Kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        /*ændre forside/12 hvis du skal bruge en ny side*/
+
+        let side;
+        const url = "http://orangeduck.dk/Naiha/wp-json/wp/v2/kontakt/65";
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            side = await response.json();
+            /* vis();*/
+            console.log(side)
+            document.querySelector(".information").innerHTML = side.content.rendered;
+            document.querySelector(".overksrift_h1").innerHTML = side.overksrift_h1;
+            document.querySelector(".billede").src = side.billede.guid;
+            document.querySelector(".naiha").src = side.naiha.guid;
+        }
     </script>
 </body></html>

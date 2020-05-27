@@ -22,29 +22,65 @@
 </header>
 
 <body>
-    <section class="wrapper">
-        <div class="col1">
-            <div class="tekst1">
-                <h1 class="overskrift_h1"></h1>
-                <p class="kalender_tekst"></p>
-            </div>
-        </div>
+    <section class="beskrivelse">
+        <h1>Kommende event</h1>
+
     </section>
-    <h1>Event navn</h1>
+
+
     <section class="flex-container">
 
         <template>
             <div class="kalender">
+                <h2 class="overskrift_h1"></h2>
                 <img class="kalenderimg" src="" alt="billede af stedet">
-                <h3 class="korttekst">kommer en meget kort tekst på 3 linjer!ommer en meget kort tekst på 3 linjer!ommer en meget kort tekst på 3 linjer!</h3>
+                <h3 class="korttekst"></h3>
                 <p style="text-align: left"><strong> Hvor:</strong> <span class="sted" style="float: right"></span></p>
-                <p style="text-align: left"><strong> dato og tid:</strong> <span class="tid" style="float: right"></span></p>
-                <p style="text-align: left"><strong> adresse:</strong> <span class="adresse" style="float: right"></span></p>
-                <p style="text-align: left"><strong> pris</strong> <span class="pris" style="float: right"></span></p>
+                <p style="text-align: left"><strong> Dato og tid:</strong> <span class="tid" style="float: right"></span></p>
+                <p style="text-align: left"><strong> Pris</strong> <span class="pris" style="float: right"></span></p>
+                <p style="text-align: left"><strong> Adresse:</strong> <span class="adresse" style="float: right"></span></p>
+                <p style="text-align: left"><strong> Postnummer</strong><span class="postnummer" style="float: right"></span></p>
+
+
             </div>
         </template>
 
     </section>
+    <footer class="fixed_footer">
+        <div class="footer">
+            <div class="contain">
+                <div class="col"></div>
+                <div class="col">
+                    <h1>Kontakt</h1>
+                    <ul>
+                        <li>alt kontatkt skal ske igennem mit forlag. </li>
+                        <li>telefon: +45 36 15 66 00</li>
+                        <li>rec@lindhardtogringhof.dk</li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>pressen skriver</h1>
+                    <ul>
+                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg"> Naiha vil skrive en bog</a> </li>
+                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/blev-headhuntet-efter-artikel-paa-drdk-vi-var-alle-sammen-blown-away"> Blev headhuntet</a> </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>menu</h1>
+                    <ul>
+                        <li><a href="om.html">Naiha Khiljee</a></li>
+                        <li><a href="Kalender.html">Event</a></li>
+                        <li><a href="#kareSoster">Kære søster</a></li>
+                        <li> <a href="Kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         let midten;
@@ -68,38 +104,19 @@
             midten.forEach(data => {
                 /* console.log("test");*/
 
-
                 const klon = template.cloneNode(true);
+                klon.querySelector(".overskrift_h1").innerHTML = data.overskrift_h1;
                 klon.querySelector(".kalenderimg").src = data.kalenderimg.guid;
                 klon.querySelector(".korttekst").innerHTML = data.korttekst;
                 klon.querySelector(".sted").innerHTML = data.sted;
                 klon.querySelector(".tid").innerHTML = data.tid;
                 klon.querySelector(".pris").innerHTML = data.pris;
+                klon.querySelector(".adresse").innerHTML = data.adresse;
+                klon.querySelector(".postnummer").innerHTML = data.postnummer;
                 eventliste.appendChild(klon);
             });
         }
 
         start();
-        /* let side;
-         const url = "http://orangeduck.dk/Naiha/wp-json/wp/v2/eventkalender/43";
-         document.addEventListener("DOMContentLoaded", start);
-
-
-
-         async function hentJson() {
-             const response = await fetch(url);
-             side = await response.json();
-              vis();
-             console.log(side)
-             document.querySelector(".kalender_tekst").innerHTML = side.content.rendered;
-             document.querySelector(".overskrift_h1").innerHTML = side.overskrift_h1;
-
-
-                 document.querySelector(".kalenderimg").src = side.kalenderimg.guid;
-                 document.querySelector(".korttekst").innerHTML = side.korttekst;
-                 document.querySelector(".sted").innerHTML = side.sted;
-                 document.querySelector(".tid").innerHTML = side.tid;
-                 document.querySelector(".pris").innerHTML = side.pris
-         }*/
     </script>
 </body></html>
