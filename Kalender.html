@@ -40,6 +40,8 @@
                 <p style="text-align: left"><strong> Pris</strong> <span class="pris" style="float: right"></span></p>
                 <p style="text-align: left"><strong> Adresse:</strong> <span class="adresse" style="float: right"></span></p>
                 <p style="text-align: left"><strong> Postnummer</strong><span class="postnummer" style="float: right"></span></p>
+                <input type="hidden" id="" name="" value="landsdel">
+                <p style="text-align: left"><strong> Postnummer</strong><span class="landsdel" style="float: right"></span></p>
 
 
             </div>
@@ -113,6 +115,7 @@
                 klon.querySelector(".pris").innerHTML = data.pris;
                 klon.querySelector(".adresse").innerHTML = data.adresse;
                 klon.querySelector(".postnummer").innerHTML = data.postnummer;
+                klon.querySelector(".landsdel").innerHTML = data.landsdel;
                 eventliste.appendChild(klon);
             });
         }

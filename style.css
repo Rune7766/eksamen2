@@ -26,7 +26,7 @@ h3 {
 
 p {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1wh;
 }
 
 
@@ -97,19 +97,19 @@ p {
 /*----------------------FORSIDE------------------------*/
 /*Hero*/
 .Heroimage h1 {
-    position: relative;
-    text-align: center;
-    color: white;
-
+    font-size: 1wh;
 }
 
-.herotekst {
+.wrapper1 {
+    float: left;
+}
+
+.tekst {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
-    transform: translate(-10%, -100%);
-    font-size: 3rem;
-    color: beige;
+    color: white;
+    transform: translate(- 10%, -70%);
 
 }
 
@@ -155,6 +155,29 @@ button {
 
 }
 
+
+/*
+@media screen and (max-width: 769px) {
+    .Heroimage h1 {
+        font-size: 0.1wh;
+    }
+
+    .wrapper1 {
+        float: left;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tekst {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        color: white;
+        transform: translate(- 10%, -70%);
+
+    }
+}*/
+
 /*--------------OM---------------*/
 .information1 {
     width: 600px;
@@ -173,18 +196,26 @@ button {
     justify-content: center;
 }
 
+.col1 {
+    flex-basis: auto;
+    flex-shrink: 2;
+}
+
 .skitse {
     display: flex;
     justify-content: center;
 }
 
 .naiha {
+
     max-width: 700px;
 }
 
+
+
 /*--------------Kalender---------------*/
 
-.tekst1 {
+.tekst2 {
     justify-content: center
 }
 
@@ -246,14 +277,19 @@ h3 {
 }
 
 .beskrivelse h1 {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-left: 10px;
     text-decoration: #2D84A7 underline;
 }
 
+
 /*--------------kontakt---------------*/
 .billede {
     width: 500px;
+}
+
+.col1 {
+    padding-left: 20px;
 }
 
 /*------------FOOTER----------------*/
