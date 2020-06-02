@@ -8,13 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoken word</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/script.js"></script>
+
 </head>
 <header>
-    <div class="topnav" id="myTopnav">
-        <a href="om.html">Naiha Khiljee</a>
+    <div class="topnav menu-links" id="myTopnav">
+        <!-- <a href="om.html">Naiha Khiljee</a>
         <a href="Kalender.html">Event</a>
         <a href="Index.html">Kære søster</a>
-        <a href="Kontakt.html">Kontakt</a>
+        <a href="Kontakt.html">Kontakt</a> -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -27,9 +29,20 @@
 
     </section>
 
+    <div class="btn-area-filter">
+        <button onclick="areaFilter('alle')">Alle</button>
+        <button onclick="areaFilter('sjælland')">Sjælland</button>
+        <button onclick="areaFilter('fyn')">Fyn</button>
+        <button onclick="areaFilter('jylland')" >jylland</button>
+    </div>
 
+
+    <div class="loading">
+        <img src="./loading.svg" alt="loading">
+    </div>
+    
     <section class="flex-container">
-
+        
         <template>
             <div class="kalender">
                 <h2 class="overskrift_h1"></h2>
@@ -40,10 +53,6 @@
                 <p style="text-align: left"><strong> Pris</strong> <span class="pris" style="float: right"></span></p>
                 <p style="text-align: left"><strong> Adresse:</strong> <span class="adresse" style="float: right"></span></p>
                 <p style="text-align: left"><strong> Postnummer</strong><span class="postnummer" style="float: right"></span></p>
-                <input type="hidden" id="" name="" value="landsdel">
-                <p style="text-align: left"><strong> Postnummer</strong><span class="landsdel" style="float: right"></span></p>
-
-
             </div>
         </template>
 
@@ -55,9 +64,9 @@
                 <div class="col">
                     <h1>Kontakt</h1>
                     <ul>
-                        <li>alt kontatkt skal ske igennem mit forlag. </li>
-                        <li>telefon: +45 36 15 66 00</li>
-                        <li>rec@lindhardtogringhof.dk</li>
+                        <li >alt kontatkt skal ske igennem mit forlag. </li>
+                        <li class="kontakt-tlf"></li>
+                        <li class="kontakt-mail"></li>
 
                     </ul>
                 </div>
@@ -70,11 +79,11 @@
                 </div>
                 <div class="col">
                     <h1>menu</h1>
-                    <ul>
-                        <li><a href="om.html">Naiha Khiljee</a></li>
+                    <ul class="footer-links">
+                        <!-- <li><a href="om.html">Naiha Khiljee</a></li>
                         <li><a href="Kalender.html">Event</a></li>
                         <li><a href="#kareSoster">Kære søster</a></li>
-                        <li> <a href="Kontakt.html">Kontakt</a></li>
+                        <li> <a href="Kontakt.html">Kontakt</a></li> -->
                     </ul>
                 </div>
 
@@ -84,7 +93,7 @@
         </div>
     </footer>
 
-    <script>
+    <script >
         let midten;
         const link = "http://orangeduck.dk/Naiha/wp-json/wp/v2/eventkalender";
         const template = document.querySelector("template").content;
@@ -102,11 +111,12 @@
         }
 
         function visEvent() {
-            console.log(midten);
             midten.forEach(data => {
-                /* console.log("test");*/
+
+                let lands = data.landsdel;
 
                 const klon = template.cloneNode(true);
+                klon.querySelector(".kalender").classList.add(lands);
                 klon.querySelector(".overskrift_h1").innerHTML = data.overskrift_h1;
                 klon.querySelector(".kalenderimg").src = data.kalenderimg.guid;
                 klon.querySelector(".korttekst").innerHTML = data.korttekst;
@@ -115,11 +125,17 @@
                 klon.querySelector(".pris").innerHTML = data.pris;
                 klon.querySelector(".adresse").innerHTML = data.adresse;
                 klon.querySelector(".postnummer").innerHTML = data.postnummer;
-                klon.querySelector(".landsdel").innerHTML = data.landsdel;
                 eventliste.appendChild(klon);
             });
+
+            document.querySelector(".loading").style.display = "none";
         }
 
         start();
+
+
+    
+
+
     </script>
 </body></html>
