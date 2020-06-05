@@ -26,7 +26,7 @@ h3 {
 
 p {
     font-family: 'Raleway', sans-serif;
-    font-size: 1wh;
+    font-size: 20px;
 }
 
 
@@ -97,22 +97,25 @@ p {
 /*----------------------FORSIDE------------------------*/
 /*Hero*/
 .Heroimage h1 {
-    font-size: 1wh;
+    font-size: 2rem;
 }
 
-.Heroimage{
+.Heroimage {
     position: relative;
 }
+
 @media only screen and (max-width: 1110px) {
     .Heroimage h1 {
         font-size: 46px;
     }
 }
+
 @media only screen and (max-width: 775px) {
     .Heroimage h1 {
         font-size: 25px;
     }
 }
+
 @media only screen and (max-width: 500px) {
     .Heroimage h1 {
         font-size: 15px;
@@ -128,7 +131,7 @@ p {
     top: 30%;
     left: 50%;
     color: white;
-    transform: translate(- 10%, -70%);
+
 
 }
 
@@ -141,68 +144,69 @@ p {
     justify-content: center;
 }
 
-.kareSoster-text{
+.kareSoster-text {
     padding: 0 13px;
 }
 
 
 
-.video-container{
+.video-container {
     width: 800px;
     margin: 1rem;
 }
 
-.video-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
-.video-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .information {
     max-width: 700px;
     /* margin-right: 160px; */
-    margin:2rem 0;
+    margin: 2rem 0;
 }
 
-.tekst{
+.tekst {
     max-width: 800px;
 }
 
 .digital {
     width: 400px;
-    
+
 }
 
-.bog{
+.bog {
     max-width: 400px;
 }
 
-.bog-wrapper{
+.bog-wrapper {
     padding: 2rem;
 }
 
 
-.digitaVideo{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.digitaVideo {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
 
 .digitaVideo iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .findminbog {
@@ -296,7 +300,7 @@ button {
     justify-content: center;
 }
 
-.loading{
+.loading {
     display: flex;
     justify-content: center;
     margin: 20px 0;
@@ -311,22 +315,21 @@ button {
     background-color: #3F3F3F;
     width: 350px;
     margin: 10px;
-    font-size: 30px;
     border-radius: 1%;
 }
 
 .kalender h2 {
     text-align: center;
+    font-size: 40px;
 }
 
 .kalender {
-    font-size: 15px;
     text-align: left;
     box-shadow: 1px 1px 5px grey;
 }
 
 .kalender h3 {
-    font-size: 17px;
+    font-size: 15px;
     text-align: left;
     padding-bottom: 10px;
 }
@@ -339,14 +342,18 @@ button {
 
 
 }
+
 @keyframes kalenderAnimation {
     from {
         opacity: 0;
-        transform:  scale(0.9);
+        transform: scale(0.9);
     }
-    to {opacity: 1;
-        transform:  scale(1);}
-  }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 .korttekst {
@@ -373,7 +380,6 @@ h3 {
 .beskrivelse h1 {
     padding-top: 40px;
     padding-left: 10px;
-    text-decoration: #2D84A7 underline;
 }
 
 @media only screen and (max-width: 500px) {
@@ -382,7 +388,7 @@ h3 {
     }
 }
 
-.btn-area-filter{
+.btn-area-filter {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -405,7 +411,7 @@ h3 {
     margin: auto;
 }
 
-.wrapper-inner{
+.wrapper-inner {
     display: flex;
     justify-content: space-around;
     margin: 0 34px;
@@ -416,6 +422,7 @@ h3 {
 .wrapper-inner .col1 {
     margin: 0 20px;
 }
+
 /*------------FOOTER----------------*/
 .fixed_footer {
     padding-top: 50px;

@@ -11,28 +11,30 @@
     <script src="/script.js"></script>
 
 </head>
-<header>
-    <div class="topnav menu-links" id="myTopnav">
-        <!-- <a href="om.html">Naiha Khiljee</a>
+
+<body>
+    <header>
+        <div class="topnav menu-links" id="myTopnav">
+            <!-- <a href="om.html">Naiha Khiljee</a>
         <a href="Kalender.html">Event</a>
         <a href="Index.html">Kære søster</a>
         <a href="Kontakt.html">Kontakt</a> -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-</header>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
 
-<body>
+
 
     <section class="wrapper-kontakt">
         <div class="wrapper-inner">
-        <div class="col1">
-            <h1 class="overksrift_h1"></h1>
-            <p class="information"></p>
+            <div class="col1">
+                <h1 class="overksrift_h1"></h1>
+                <p class="information"></p>
+            </div>
+            <img class="billede" src="" alt="billede af stedet">
         </div>
-        <img class="billede" src="" alt="billede af stedet">
-    </div>
     </section>
     <div class="skitse">
         <img class="naiha" src="" alt="billede af bogen"></div>
@@ -77,8 +79,6 @@
 
 
     <script>
-        /*ændre forside/12 hvis du skal bruge en ny side*/
-
         let side;
         const url = "http://orangeduck.dk/Naiha/wp-json/wp/v2/kontakt/65";
         document.addEventListener("DOMContentLoaded", start);

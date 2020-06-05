@@ -11,19 +11,21 @@
     <script src="/script.js"></script>
 
 </head>
-<header>
-    <div class="topnav menu-links" id="myTopnav">
-        <!-- <a href="om.html">Naiha Khiljee</a>
+
+<body>
+    <header>
+        <div class="topnav menu-links" id="myTopnav">
+            <!-- <a href="om.html">Naiha Khiljee</a>
         <a href="Kalender.html">Event</a>
         <a href="Index.html">Kære søster</a>
         <a href="Kontakt.html">Kontakt</a> -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-</header>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
 
-<body>
+
     <section class="beskrivelse">
         <h1>Kommende event</h1>
 
@@ -33,16 +35,16 @@
         <button onclick="areaFilter('alle')">Alle</button>
         <button onclick="areaFilter('sjælland')">Sjælland</button>
         <button onclick="areaFilter('fyn')">Fyn</button>
-        <button onclick="areaFilter('jylland')" >jylland</button>
+        <button onclick="areaFilter('jylland')">jylland</button>
     </div>
 
 
     <div class="loading">
         <img src="./loading.svg" alt="loading">
     </div>
-    
+
     <section class="flex-container">
-        
+
         <template>
             <div class="kalender">
                 <h2 class="overskrift_h1"></h2>
@@ -64,7 +66,7 @@
                 <div class="col">
                     <h1>Kontakt</h1>
                     <ul>
-                        <li >alt kontatkt skal ske igennem mit forlag. </li>
+                        <li>alt kontatkt skal ske igennem mit forlag. </li>
                         <li class="kontakt-tlf"></li>
                         <li class="kontakt-mail"></li>
 
@@ -93,7 +95,7 @@
         </div>
     </footer>
 
-    <script >
+    <script>
         let midten;
         const link = "http://orangeduck.dk/Naiha/wp-json/wp/v2/eventkalender";
         const template = document.querySelector("template").content;
@@ -132,10 +134,5 @@
         }
 
         start();
-
-
-    
-
-
     </script>
 </body></html>
