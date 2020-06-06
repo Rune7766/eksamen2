@@ -2,111 +2,117 @@
  <html lang="da">
 
  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9ccbd06af1.js" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spoken word</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="/script.js"></script>
-</head>
+     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/9ccbd06af1.js" crossorigin="anonymous"></script>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Spoken word</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="/script.js"></script>
+ </head>
 
-<body>
-    <header>
-        <div class="topnav menu-links" id="myTopnav">
-            <!-- <a href="om.html">Naiha Khiljee</a> -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </header>
-
-
-
-
-
-    <section class="Heroimage">
-        <img class="splash" src="" alt="Naiha K">
-        <h1 class="tekst"></h1>
-    </section>
-
-
-    <section id="kareSoster">
-        <div class="col1 kareSoster-text">
-            <div class="tekst1">
-                <p class="information"></p>
-            </div>
-            <div class="findminbog">
-                <button onclick="window.location.href='https://www.saxo.com/dk/kaere-soester_naiha-khiljee_haeftet_9788711918753?dfw_tracker=13098-75990987&gclid=CjwKCAjw2a32BRBXEiwAUcugiP07IU3YB7eBbtusuofF3dq-oE3cupZOdU22vN0aJOY6VZG05ib3sBoCe38QAvD_BwE'">Find min bog her</button>
-            </div>
-        </div>
-        <div class="bog-wrapper">
-            <img class="bog" src="" alt="billede af bogen">
-        </div>
-    </section>
-    <div class="skitse">
-        <img class="naiha" src="" alt="billede af bogen"></div>
+ <body>
+     <header>
+         <div class="topnav menu-links" id="myTopnav">
+             <a href="Index.html">Kære søster</a>
+             <a href="om.html">Naiha Khiljee</a>
+             <a href="Kalender.html">Event</a>
+             <a href="Kontakt.html">Kontakt</a>
+             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars"></i>
+             </a>
+         </div>
+     </header>
 
 
 
-    <script>
-        /*ændre forside/12 hvis du skal bruge en ny side*/
-
-        let side;
-        const url = "http://orangeduck.dk/Naiha/wp-json/wp/v2/forside/12";
-        document.addEventListener("DOMContentLoaded", start);
 
 
-        function start() {
-            hentJson();
-        }
+     <section class="Heroimage">
+         <img class="splash" src="" alt="Naiha K">
+         <h1 class="tekst"></h1>
+     </section>
 
-        async function hentJson() {
-            const response = await fetch(url);
-            side = await response.json();
-            /* vis();*/
-            console.log(side)
-            document.querySelector(".information").innerHTML = side.content.rendered;
-            document.querySelector(".tekst").innerHTML = side.herotekst;
-            document.querySelector(".bog").src = side.imgbook.guid;
-            document.querySelector(".splash").src = side.splash.guid;
-            document.querySelector(".naiha").src = side.naiha.guid;
-        }
-    </script>
-    <footer class="fixed_footer">
-        <div class="footer">
-            <div class="contain">
-                <div class="col"></div>
-                <div class="col">
-                    <h2>Kontakt</h2>
-                    <ul>
-                        <li>alt kontatkt skal ske igennem mit forlag. </li>
-                        <li>telefon: +45 36 15 66 00</li>
-                        <li>rec@lindhardtogringhof.dk</li>
 
-                    </ul>
-                </div>
-                <div class="col">
-                    <h2>pressen skriver</h2>
-                    <ul>
-                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg"> Naiha vil skrive en bog</a> </li>
-                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/blev-headhuntet-efter-artikel-paa-drdk-vi-var-alle-sammen-blown-away"> Blev headhuntet</a> </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h2>menu</h2>
-                    <ul class="footer-links">
-                        <!-- <li><a href="om.html">Naiha Khiljee</a></li>
+     <section id="kareSoster">
+         <div class="col1 kareSoster-text">
+             <div class="tekst1">
+                 <p class="information"></p>
+             </div>
+             <div class="findminbog">
+                 <button onclick="window.location.href='https://www.saxo.com/dk/kaere-soester_naiha-khiljee_haeftet_9788711918753?dfw_tracker=13098-75990987&gclid=CjwKCAjw2a32BRBXEiwAUcugiP07IU3YB7eBbtusuofF3dq-oE3cupZOdU22vN0aJOY6VZG05ib3sBoCe38QAvD_BwE'">Find min bog her</button>
+             </div>
+         </div>
+         <div class="bog-wrapper">
+             <img class="bog" src="" alt="billede af bogen">
+         </div>
+     </section>
+     <div class="skitse">
+         <img class="naiha" src="" alt="billede af bogen"></div>
+
+
+
+     <script>
+         /*ændre forside/12 hvis du skal bruge en ny side*/
+
+         let side;
+         const url = "http://orangeduck.dk/Naiha/wp-json/wp/v2/forside/12";
+         document.addEventListener("DOMContentLoaded", start);
+
+
+         function start() {
+             hentJson();
+         }
+
+         async function hentJson() {
+             const response = await fetch(url);
+             side = await response.json();
+             /* vis();*/
+             console.log(side)
+             document.querySelector(".information").innerHTML = side.content.rendered;
+             document.querySelector(".tekst").innerHTML = side.herotekst;
+             document.querySelector(".bog").src = side.imgbook.guid;
+             document.querySelector(".splash").src = side.splash.guid;
+             document.querySelector(".naiha").src = side.naiha.guid;
+         }
+
+     </script>
+     <footer class="fixed_footer">
+         <div class="footer">
+             <div class="contain">
+                 <div class="col"></div>
+                 <div class="col">
+                     <h2>Kontakt</h2>
+                     <ul>
+                         <li>alt kontatkt skal ske igennem mit forlag. </li>
+                         <li>telefon: +45 36 15 66 00</li>
+                         <li>rec@lindhardtogringhof.dk</li>
+
+                     </ul>
+                 </div>
+                 <div class="col">
+                     <h2>pressen skriver</h2>
+                     <ul>
+                         <li><a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg"> Naiha vil skrive en bog</a> </li>
+                         <li><a href="https://www.dr.dk/nyheder/kultur/boeger/blev-headhuntet-efter-artikel-paa-drdk-vi-var-alle-sammen-blown-away"> Blev headhuntet</a> </li>
+                     </ul>
+                 </div>
+                 <div class="col">
+                     <h2>menu</h2>
+                     <ul class="footer-links">
+                         <!-- <li><a href="om.html">Naiha Khiljee</a></li>
                         <li><a href="Kalender.html">Event</a></li>
                         <li><a href="#kareSoster">Kære søster</a></li>
                         <li> <a href="Kontakt.html">Kontakt</a></li> -->
-                    </ul>
-                </div>
+                     </ul>
+                 </div>
 
 
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </footer>
+                 <div class="clearfix"></div>
+             </div>
+         </div>
+     </footer>
 
-</body></html>
+ </body>
+
+ </html>

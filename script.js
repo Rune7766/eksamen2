@@ -27,7 +27,7 @@ allAreas.forEach(function(a) {
 }
 
 async function getFooterData(){
-    let res = await fetch('http://orangeduck.dk/Naiha/wp-json/wp/v2/footer_section')
+    let res = await fetch('https://orangeduck.dk/Naiha/wp-json/wp/v2/footer_section')
     footerData = await res.json();
 
     footerData.map( f => {
@@ -40,7 +40,7 @@ getFooterData();
 
 
 async function getMenuLinks() {
-    let res = await fetch('http://orangeduck.dk/Naiha/wp-json/wp/v2/menu');
+    let res = await fetch('https://orangeduck.dk/Naiha/wp-json/wp/v2/menu');
     menuItem = await res.json();
 
     let menuLinks = document.querySelector(".menu-links");
