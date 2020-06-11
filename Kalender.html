@@ -2,137 +2,140 @@
  <html lang="da">
 
  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9ccbd06af1.js" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spoken word</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="/script.js"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/9ccbd06af1.js" crossorigin="anonymous"></script>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Spoken word</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="script.js"></script>
 
-</head>
+ </head>
 
-<body>
-    <header>
-        <div class="topnav menu-links" id="myTopnav">
-            <!-- <a href="om.html">Naiha Khiljee</a>
-        <a href="Kalender.html">Event</a>
-        <a href="Index.html">Kære søster</a>
-        <a href="Kontakt.html">Kontakt</a> -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </header>
-
-
-    <section class="beskrivelse">
-        <h1>Kommende event</h1>
-
-    </section>
-
-    <div class="btn-area-filter">
-        <button onclick="areaFilter('alle')">Alle</button>
-        <button onclick="areaFilter('sjælland')">Sjælland</button>
-        <button onclick="areaFilter('fyn')">Fyn</button>
-        <button onclick="areaFilter('jylland')">jylland</button>
-    </div>
+ <body>
+     <header>
+         <div class="topnav menu-links" id="myTopnav">
+             <!--<a href="Index.html">Kære søster</a>
+             <a href="om.html">Naiha Khiljee</a>
+             <a href="Kalender.html">Event</a>
+             <a href="Kontakt.html">Kontakt</a>-->
+             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars"></i>
+             </a>
+         </div>
+     </header>
 
 
-    <div class="loading">
-        <img src="./loading.svg" alt="loading">
-    </div>
+     <section class="beskrivelse">
+         <h1>Kommende event</h1>
 
-    <section class="flex-container">
+     </section>
 
-        <template>
-            <div class="kalender">
-                <h2 class="overskrift_h1"></h2>
-                <img class="kalenderimg" src="" alt="billede af stedet">
-                <h3 class="korttekst"></h3>
-                <p style="text-align: left"><strong> Hvor:</strong> <span class="sted" style="float: right"></span></p>
-                <p style="text-align: left"><strong> Dato og tid:</strong> <span class="tid" style="float: right"></span></p>
-                <p style="text-align: left"><strong> Pris</strong> <span class="pris" style="float: right"></span></p>
-                <p style="text-align: left"><strong> Adresse:</strong> <span class="adresse" style="float: right"></span></p>
-                <p style="text-align: left"><strong> Postnummer</strong><span class="postnummer" style="float: right"></span></p>
-            </div>
-        </template>
+     <div class="btn-area-filter">
+         <button onclick="areaFilter('alle')">Alle</button>
+         <button onclick="areaFilter('sjælland')">Sjælland</button>
+         <button onclick="areaFilter('fyn')">Fyn</button>
+         <button onclick="areaFilter('jylland')">jylland</button>
+     </div>
 
-    </section>
-    <footer class="fixed_footer">
-        <div class="footer">
-            <div class="contain">
-                <div class="col"></div>
-                <div class="col">
-                    <h1>Kontakt</h1>
-                    <ul>
-                        <li>alt kontatkt skal ske igennem mit forlag. </li>
-                        <li class="kontakt-tlf"></li>
-                        <li class="kontakt-mail"></li>
 
-                    </ul>
-                </div>
-                <div class="col">
-                    <h1>pressen skriver</h1>
-                    <ul>
-                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg"> Naiha vil skrive en bog</a> </li>
-                        <li><a href="https://www.dr.dk/nyheder/kultur/boeger/blev-headhuntet-efter-artikel-paa-drdk-vi-var-alle-sammen-blown-away"> Blev headhuntet</a> </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h1>menu</h1>
-                    <ul class="footer-links">
-                        <!-- <li><a href="om.html">Naiha Khiljee</a></li>
+     <div class="loading">
+         <img src="./loading.svg" alt="loading">
+     </div>
+
+     <section class="flex-container">
+
+         <template>
+             <div class="kalender">
+                 <h2 class="overskrift_h1"></h2>
+                 <img class="kalenderimg" src="" alt="billede af stedet">
+                 <h3 class="korttekst"></h3>
+                 <p style="text-align: left"><strong> Hvor:</strong> <span class="sted" style="float: right"></span></p>
+                 <p style="text-align: left"><strong> Dato og tid:</strong> <span class="tid" style="float: right"></span></p>
+                 <p style="text-align: left"><strong> Pris</strong> <span class="pris" style="float: right"></span></p>
+                 <p style="text-align: left"><strong> Adresse:</strong> <span class="adresse" style="float: right"></span></p>
+                 <p style="text-align: left"><strong> Postnummer</strong><span class="postnummer" style="float: right"></span></p>
+             </div>
+         </template>
+
+     </section>
+     <footer class="fixed_footer">
+         <div class="footer">
+             <div class="contain">
+                 <div class="col"></div>
+                 <div class="col">
+                     <h1>Kontakt</h1>
+                     <ul>
+                         <li>alt kontatkt skal ske igennem mit forlag. </li>
+                         <li class="kontakt-tlf"></li>
+                         <li class="kontakt-mail"></li>
+
+                     </ul>
+                 </div>
+                 <div class="col">
+                     <h1>pressen skriver</h1>
+                     <ul>
+                         <li><a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg"> Naiha vil skrive en bog</a> </li>
+                         <li><a href="https://www.dr.dk/nyheder/kultur/boeger/blev-headhuntet-efter-artikel-paa-drdk-vi-var-alle-sammen-blown-away"> Blev headhuntet</a> </li>
+                     </ul>
+                 </div>
+                 <div class="col">
+                     <h1>menu</h1>
+                     <ul class="footer-links">
+                         <!-- <li><a href="om.html">Naiha Khiljee</a></li>
                         <li><a href="Kalender.html">Event</a></li>
                         <li><a href="#kareSoster">Kære søster</a></li>
                         <li> <a href="Kontakt.html">Kontakt</a></li> -->
-                    </ul>
-                </div>
+                     </ul>
+                 </div>
 
 
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </footer>
+                 <div class="clearfix"></div>
+             </div>
+         </div>
+     </footer>
 
-    <script>
-        let midten;
-        const link = "http://orangeduck.dk/Naiha/wp-json/wp/v2/eventkalender";
-        const template = document.querySelector("template").content;
-        const eventliste = document.querySelector(".flex-container");
+     <script>
+         let midten;
+         const link = "https://orangeduck.dk/Naiha/wp-json/wp/v2/eventkalender";
+         const template = document.querySelector("template").content;
+         const eventliste = document.querySelector(".flex-container");
 
-        function start() {
-            hentJson2();
-        }
+         function start() {
+             hentJson2();
+         }
 
-        async function hentJson2() {
-            let response = await fetch(link);
-            midten = await response.json();
+         async function hentJson2() {
+             let response = await fetch(link);
+             midten = await response.json();
 
-            visEvent();
-        }
+             visEvent();
+         }
 
-        function visEvent() {
-            midten.forEach(data => {
+         function visEvent() {
+             midten.forEach(data => {
 
-                let lands = data.landsdel;
+                 let lands = data.landsdel;
 
-                const klon = template.cloneNode(true);
-                klon.querySelector(".kalender").classList.add(lands);
-                klon.querySelector(".overskrift_h1").innerHTML = data.overskrift_h1;
-                klon.querySelector(".kalenderimg").src = data.kalenderimg.guid;
-                klon.querySelector(".korttekst").innerHTML = data.korttekst;
-                klon.querySelector(".sted").innerHTML = data.sted;
-                klon.querySelector(".tid").innerHTML = data.tid;
-                klon.querySelector(".pris").innerHTML = data.pris;
-                klon.querySelector(".adresse").innerHTML = data.adresse;
-                klon.querySelector(".postnummer").innerHTML = data.postnummer;
-                eventliste.appendChild(klon);
-            });
+                 const klon = template.cloneNode(true);
+                 klon.querySelector(".kalender").classList.add(lands);
+                 klon.querySelector(".overskrift_h1").innerHTML = data.overskrift_h1;
+                 klon.querySelector(".kalenderimg").src = data.kalenderimg.guid;
+                 klon.querySelector(".korttekst").innerHTML = data.korttekst;
+                 klon.querySelector(".sted").innerHTML = data.sted;
+                 klon.querySelector(".tid").innerHTML = data.tid;
+                 klon.querySelector(".pris").innerHTML = data.pris;
+                 klon.querySelector(".adresse").innerHTML = data.adresse;
+                 klon.querySelector(".postnummer").innerHTML = data.postnummer;
+                 eventliste.appendChild(klon);
+             });
 
-            document.querySelector(".loading").style.display = "none";
-        }
+             document.querySelector(".loading").style.display = "none";
+         }
 
-        start();
-    </script>
-</body></html>
+         start();
+
+     </script>
+ </body>
+
+ </html>

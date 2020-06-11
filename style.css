@@ -398,7 +398,7 @@ h3 {
 
 /*--------------kontakt---------------*/
 .billede {
-    max-width: 500px;
+    max-width: 235px;
 }
 
 .col1 {
@@ -413,7 +413,7 @@ h3 {
 
 .wrapper-inner {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0 34px;
     justify-items: end;
     flex-wrap: wrap;
